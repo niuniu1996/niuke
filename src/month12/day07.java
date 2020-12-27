@@ -44,9 +44,9 @@ public class day07 {
     }
 
     public static void main(String[] args) {
-        int n1 = new day07().Fibonacci(5);
+        int n1 = new day07().Fibonacci(6);
         System.out.println(n1);
-        int j = new day07().Fibonaccidigui(5);
+        int j = new day07().Fibonaccidigui(4);
         System.out.println(j);
     }
 }
