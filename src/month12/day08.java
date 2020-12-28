@@ -37,8 +37,40 @@ public class day08 {
             return 2 * JumpFloorII(target - 1);
         }
     }
-    public static void main(String [] args){
+
+    /**
+     * 跳台阶胡做法
+     * @param target
+     * @return
+     */
+    public int JumpFloor(int target) {
+        int sum = 0;
+        if (target == 0) {
+            return 0;
+        }
+        if (target == 1) {
+            return 1;
+        }
+        if (target == 2) {
+            return 2;
+        }
+        int one = 1;
+        int two = 2;
+        for (int i = 2; i < target; i++) {
+            sum = one + two;
+            one = two;
+            two = sum;
+        }
+        return sum;
+
+    }
+
+
+    public static void main(String[] args) {
         int i = new day08().JumpFloorII(6);
         System.out.println(i);
+        int j = new day08().JumpFloor(6);
+        System.out.println(j);
+
     }
 }
